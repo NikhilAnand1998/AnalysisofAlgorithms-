@@ -35,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="24dp"
+                android:inputType="number"
                 android:textSize="56sp"
                 android:textColor="#000000"
                 android:fontFamily="sans-serif-light"
@@ -65,29 +66,32 @@
 
 
             <Button
+                android:id="@+id/btnfour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
                 android:onClick="addFour"
                 android:text="4 Runs" />
 
             <Button
+                android:id="@+id/btnsix"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
                 android:onClick="addSix"
                 android:text="6 Runs" />
 
             <Button
+                android:id="@+id/btnwide"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="0dp"
                 android:onClick="addWide"
                 android:text="Wide" />
         </LinearLayout>
@@ -118,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:inputType="number"
                 android:paddingBottom="24dp"
                 android:textSize="56sp"
                 android:textColor="#000000"
@@ -128,11 +133,69 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnreset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
-        android:text="Reset"
-        android:onClick="resetScore"/>
+        android:onClick="resetScore"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/over"
+        android:layout_width="wrap_content"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="172dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="Current Over: "
+        android:textColor="#616161"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/ball"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="108dp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="Last Ball: "
+        android:textColor="#616161"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/over_numb"
+        android:layout_width="238dp"
+        android:layout_height="87dp"
+        android:layout_above="@+id/ball"
+        android:layout_toEndOf="@+id/ball"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingBottom="24dp"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="56sp" />
+
+    <TextView
+        android:id="@+id/ball_numb"
+        android:layout_width="238dp"
+        android:layout_height="87dp"
+        android:layout_below="@+id/over"
+        android:layout_marginTop="-172dp"
+        android:layout_toEndOf="@+id/ball"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingBottom="24dp"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="56sp" />
+
 </RelativeLayout>
+
