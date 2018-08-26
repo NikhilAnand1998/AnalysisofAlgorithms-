@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     //EditText team_a_score;
     Button   btnfour, btnsix, btnwide, btnreset;
     ToggleButton btnwhobats;
-    ImageView team_a_bat_image, team_b_bat_image;
+    ImageView team_a_bat_image, team_b_bat_image, blackballone,blackballtwo,blackballthree,blackballfour,blackballfive,blackballsix;
     int Ascore = 0;
     int Bscore = 0;
     int balls = 0;
@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
         btnwhobats = findViewById(R.id.btnwhobats);
         team_a_bat_image = findViewById(R.id.team_a_bat_image);
         team_b_bat_image = findViewById(R.id.team_b_bat_image);
+        blackballone = findViewById(R.id.blackballone);
+        blackballtwo = findViewById(R.id.blackballtwo);
+        blackballthree = findViewById(R.id.blackballthree);
+        blackballfour = findViewById(R.id.blackballfour);
+        blackballfive = findViewById(R.id.blackballfive);
+        blackballsix = findViewById(R.id.blackballsix);
+
 
         btnwhobats.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,12 +82,36 @@ public class MainActivity extends AppCompatActivity {
                 if(balls != 5){
                     balls+=1;
                     ball_numb.setText(balls+"");
+                    if(balls == 1){
+                        blackballone.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 2){
+                        blackballtwo.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 3){
+                        blackballthree.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 4){
+                        blackballfour.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 5){
+                        blackballfive.setImageResource(R.drawable.rball);
+                    }
+
+
                 }
                 else{
                     balls = 0;
                     ball_numb.setText(balls+"");
                     overs +=1;
                     over_numb.setText(overs+"");
+                    blackballone.setImageResource(R.drawable.bball);
+                    blackballtwo.setImageResource(R.drawable.bball);
+                    blackballthree.setImageResource(R.drawable.bball);
+                    blackballfour.setImageResource(R.drawable.bball);
+                    blackballfive.setImageResource(R.drawable.bball);
+                    blackballsix.setImageResource(R.drawable.bball);
+
                 }
             }
         });
@@ -98,12 +129,34 @@ public class MainActivity extends AppCompatActivity {
                 if(balls != 5){
                     balls+=1;
                     ball_numb.setText(balls+"");
+                    if(balls == 1){
+                        blackballone.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 2){
+                        blackballtwo.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 3){
+                        blackballthree.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 4){
+                        blackballfour.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 5){
+                        blackballfive.setImageResource(R.drawable.rball);
+                    }
                 }
                 else{
                     balls = 0;
                     ball_numb.setText(balls+"");
                     overs +=1;
                     over_numb.setText(overs+"");
+                    blackballone.setImageResource(R.drawable.bball);
+                    blackballtwo.setImageResource(R.drawable.bball);
+                    blackballthree.setImageResource(R.drawable.bball);
+                    blackballfour.setImageResource(R.drawable.bball);
+                    blackballfive.setImageResource(R.drawable.bball);
+                    blackballsix.setImageResource(R.drawable.bball);
+                    //changes ball color
                 }
             }
         });

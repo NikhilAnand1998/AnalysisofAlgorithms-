@@ -8,6 +8,61 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/blackballone"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/ball"
+        android:layout_marginTop="-108dp"
+        android:layout_toStartOf="@+id/blackballtwo"
+        app:srcCompat="@drawable/bball" />
+
+    <ImageView
+        android:id="@+id/blackballtwo"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/ball"
+        android:layout_marginTop="-108dp"
+        android:layout_toStartOf="@+id/blackballthree"
+        app:srcCompat="@drawable/bball" />
+
+    <ImageView
+        android:id="@+id/blackballthree"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/ball"
+        android:layout_marginTop="-108dp"
+        android:layout_toStartOf="@+id/blackballfour"
+        app:srcCompat="@drawable/bball" />
+
+    <ImageView
+        android:id="@+id/blackballfour"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/ball"
+        android:layout_marginTop="-108dp"
+        android:layout_toStartOf="@+id/blackballfive"
+        app:srcCompat="@drawable/bball" />
+
+    <ImageView
+        android:id="@+id/blackballfive"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/ball"
+        android:layout_marginTop="-108dp"
+        android:layout_toStartOf="@+id/blackballsix"
+        app:srcCompat="@drawable/bball" />
+
+    <ImageView
+        android:id="@+id/blackballsix"
+        android:layout_width="51dp"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/ball"
+        android:layout_marginEnd="41dp"
+        android:layout_marginTop="-108dp"
+        app:srcCompat="@drawable/bball" />
+
     <LinearLayout
         android:id="@+id/runsdisplay"
         android:layout_width="match_parent"
@@ -169,8 +224,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_toEndOf="@+id/over"
         android:text="Reset" />
 
     <TextView
@@ -203,8 +257,8 @@
 
     <TextView
         android:id="@+id/over_numb"
-        android:layout_width="238dp"
-        android:layout_height="87dp"
+        android:layout_width="228dp"
+        android:layout_height="89dp"
         android:layout_above="@+id/ball"
         android:layout_toEndOf="@+id/ball"
         android:layout_toRightOf="@+id/ball"
@@ -231,6 +285,7 @@
         android:text="0"
         android:textColor="#000000"
         android:textSize="56sp" />
+
 
 </RelativeLayout>
 
