@@ -149,10 +149,10 @@
 
     <LinearLayout
         android:id="@+id/togglerdisplay"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/runsdisplay">
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
         <ToggleButton
             android:id="@+id/btnwhobats"
@@ -184,8 +184,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Current Over: "
                 android:paddingLeft="16dp"
+                android:text="Over: "
                 android:textColor="#616161"
                 android:textSize="20sp" />
 
@@ -199,6 +199,27 @@
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="20dp"
+                android:text="Outs: "
+                android:textColor="#616161"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/outnumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:text="0" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -208,16 +229,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/ball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="Last Ball: "
-                android:paddingLeft="16dp"
-                android:textColor="#616161"
-                android:textSize="20sp" />
-
-            <TextView
                 android:id="@+id/ball_numb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -225,7 +236,8 @@
                 android:inputType="number"
                 android:text="0"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -281,9 +293,64 @@
         android:id="@+id/btnreset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnone"
         android:text="Reset" />
+
+    <Button
+    android:id="@+id/btnone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/overscontainer"
+    android:text="1 Run" />
+
+    <Button
+        android:id="@+id/btntwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_below="@+id/overscontainer"
+        android:layout_toEndOf="@+id/btnone"
+        android:text="2 Runs" />
+
+    <Button
+        android:id="@+id/btnthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/overscontainer"
+        android:layout_marginEnd="11dp"
+        android:text="3 Runs" />
+
+    <Button
+        android:id="@+id/btnfive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnthree"
+        android:text="5 Runs" />
+
+    <Button
+        android:id="@+id/btnnoball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btntwo"
+        android:text="No Ball" />
+
+    <Button
+        android:id="@+id/btnout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnthree"
+        android:layout_centerVertical="true"
+        android:text="Out" />
 
 </RelativeLayout>
 
