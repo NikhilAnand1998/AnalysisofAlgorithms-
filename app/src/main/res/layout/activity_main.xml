@@ -127,32 +127,7 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnfour"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:text="4 Runs" />
 
-            <Button
-                android:id="@+id/btnsix"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:text="6 Runs" />
-
-            <Button
-                android:id="@+id/btnwide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:text="Wide" />
         </LinearLayout>
 
         <View
@@ -202,9 +177,9 @@
 
     <LinearLayout
         android:id="@+id/ballsimagedisplay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_below="@id/runsdisplay"
         android:padding="16dp"
         android:orientation="horizontal">
@@ -248,62 +223,85 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/togglerdisplay"
-        android:layout_width="wrap_content"
+        android:id="@+id/runoptionscontainer1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ballsimagedisplay"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/ballsimagedisplay">
 
-        <ToggleButton
-            android:id="@+id/btnwhobats"
+        <Button
+            android:id="@+id/btnone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:textOff="Team A Bats"
-            android:textOn="Team B Bats" />
+            android:text="1 Run" />
+
+        <Button
+            android:id="@+id/btntwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Runs" />
+
+        <Button
+            android:id="@+id/btnthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Runs" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/overscontainer"
+        android:id="@+id/runoptionscontainer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="16dp"
-        android:layout_below="@id/togglerdisplay">
+        android:gravity="center"
+        android:layout_below="@id/runoptionscontainer1">
 
-        <LinearLayout
-            android:id="@+id/oversdisplay"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnfour"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="4 Runs" />
 
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ballsdisplay"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnfive"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="5 Runs" />
 
-            <TextView
-                android:id="@+id/ball_numb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:inputType="number"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:visibility="gone" />
+        <Button
+            android:id="@+id/btnsix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6 Runs" />
 
-        </LinearLayout>
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/runoptionscontainer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/runoptionscontainer2">
 
+        <Button
+            android:id="@+id/btnwide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wide" />
+
+        <Button
+            android:id="@+id/btnout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out" />
+
+        <Button
+            android:id="@+id/btnnoball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Ball" />
 
     </LinearLayout>
 
@@ -312,63 +310,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btnone"
         android:text="Reset" />
 
-    <Button
-    android:id="@+id/btnone"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:layout_marginLeft="24dp"
-    android:layout_marginRight="24dp"
-    android:layout_alignParentStart="true"
-    android:layout_below="@+id/overscontainer"
-    android:text="1 Run" />
-
-    <Button
-        android:id="@+id/btntwo"
+    <ToggleButton
+        android:id="@+id/btnwhobats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_below="@+id/overscontainer"
-        android:layout_toEndOf="@+id/btnone"
-        android:text="2 Runs" />
-
-    <Button
-        android:id="@+id/btnthree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/overscontainer"
-        android:layout_marginEnd="11dp"
-        android:text="3 Runs" />
-
-    <Button
-        android:id="@+id/btnfive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btnthree"
-        android:text="5 Runs" />
-
-    <Button
-        android:id="@+id/btnnoball"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btntwo"
-        android:text="No Ball" />
-
-    <Button
-        android:id="@+id/btnout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btnthree"
-        android:layout_centerVertical="true"
-        android:text="Out" />
+        android:textOff="Team A Bats"
+        android:textOn="Team B Bats" />
 
 </RelativeLayout>
 

@@ -16,7 +16,6 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
     TextView team_a_score;
     TextView team_b_score;
-    TextView ball_numb;
     TextView over_numb;
     TextView outnumb;
     //EditText team_a_score;
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         team_a_score =  findViewById(R.id.team_a_score);
         team_b_score =  findViewById(R.id.team_b_score);
         outnumb = findViewById(R.id.outnumb);
-        ball_numb = findViewById(R.id.ball_numb);
         over_numb = findViewById(R.id.over_numb);
         btnfour = findViewById(R.id.btnfour);
         btnsix = findViewById(R.id.btnsix);
@@ -97,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
                     newballs +=0.1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
-                    ball_numb.setText(balls+"");
                     if(balls == 1){
                         blackballone.setImageResource(R.drawable.rball);
                     }
@@ -119,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     balls = 0;
                     newballs = 0;
-                    ball_numb.setText(balls+"");
                     overs +=1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
@@ -149,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
                     newballs +=0.1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
-                    ball_numb.setText(balls+"");
                     if(balls == 1){
                         blackballone.setImageResource(R.drawable.rball);
                     }
@@ -169,7 +164,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     balls = 0;
                     newballs = 0;
-                    ball_numb.setText(balls+"");
                     overs +=1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
@@ -226,7 +220,6 @@ public class MainActivity extends AppCompatActivity {
                     newballs +=0.1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
-                    ball_numb.setText(balls+"");
                     if(balls == 1){
                         blackballone.setImageResource(R.drawable.rball);
                     }
@@ -246,7 +239,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     balls = 0;
                     newballs = 0;
-                    ball_numb.setText(balls+"");
                     overs +=1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
@@ -276,7 +268,6 @@ public class MainActivity extends AppCompatActivity {
                     newballs +=0.1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
-                    ball_numb.setText(balls+"");
                     if(balls == 1){
                         blackballone.setImageResource(R.drawable.rball);
                     }
@@ -296,7 +287,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     balls = 0;
                     newballs = 0;
-                    ball_numb.setText(balls+"");
                     overs +=1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
@@ -327,7 +317,6 @@ public class MainActivity extends AppCompatActivity {
                     newballs +=0.1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
-                    ball_numb.setText(balls+"");
 
                     if(balls == 1){
                         blackballone.setImageResource(R.drawable.rball);
@@ -348,7 +337,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     balls = 0;
                     newballs = 0;
-                    ball_numb.setText(balls+"");
                     overs +=1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
@@ -377,7 +365,6 @@ public class MainActivity extends AppCompatActivity {
                     balls+=1;
                     newballs +=0.1;
                     newovers = overs + newballs;
-                    ball_numb.setText(balls+"");
                     over_numb.setText(newovers+"");
                     if(balls == 1){
                         blackballone.setImageResource(R.drawable.rball);
@@ -398,7 +385,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     balls = 0;
                     newballs = 0;
-                    ball_numb.setText(balls+"");
                     overs +=1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
@@ -428,7 +414,6 @@ public class MainActivity extends AppCompatActivity {
                     balls+=1;
                     newballs +=0.1;
                     newovers = overs + newballs;
-                    ball_numb.setText(balls+"");
                     over_numb.setText(newovers+"");
                     if(balls == 1){
                         blackballone.setImageResource(R.drawable.rball);
@@ -449,7 +434,6 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     balls = 0;
                     newballs = 0;
-                    ball_numb.setText(balls+"");
                     overs +=1;
                     newovers = overs + newballs;
                     over_numb.setText(newovers+"");
