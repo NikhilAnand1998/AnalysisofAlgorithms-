@@ -15,8 +15,10 @@ public class InitiateLogin extends AppCompatActivity {
     TextView batsfirsttest;
     String nameone, nametwo;
     int     numbovers;
+    int     afirst;
     Button  btnsubmit;
     EditText teamone, teamtwo, maxovers;
+    RadioButton radioButton, radioButtonB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,8 @@ public class InitiateLogin extends AppCompatActivity {
         maxovers = findViewById(R.id.maxovers);
         btnsubmit = findViewById(R.id.btnsubmit);
         batsfirsttest = findViewById(R.id.batsfirst);
-
+        radioButton = findViewById(R.id.teamonebat);
+        radioButtonB = findViewById(R.id.teamtwobat);
         btnsubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +39,27 @@ public class InitiateLogin extends AppCompatActivity {
                 nametwo = teamtwo.getText().toString();
                 numbovers = Integer.valueOf(maxovers.getText().toString());
 
-                startActivity(new Intent(InitiateLogin.this,MainActivity.class));
+
+
+
+                Intent intent = new Intent(InitiateLogin.this,MainActivity.class);
+                intent.putExtra("teamonename",teamone.getText().toString());
+                intent.putExtra("teamtwoname",teamtwo.getText().toString());
+               // intent.putExtra("maxoversgame",numbovers);
+                if(radioButton.isChecked())
+                {
+                     afirst = 1;
+                     intent.putExtra("isAfirst",afirst);
+                }
+                else if(radioButtonB.isChecked())
+                {
+                    afirst =0;
+                    intent.putExtra("isAfirst",afirst);
+                }
+                ///
+
+                startActivity(intent);
+              //  startActivity(new Intent(InitiateLogin.this,MainActivity.class));
 
             }
 

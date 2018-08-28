@@ -1,5 +1,6 @@
 package com.example.android.crickit;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView team_b_score;
     TextView over_numb;
     TextView outnumb;
+    TextView nameayy;
+    TextView namebay;
     //EditText team_a_score;
     Button   btnfour, btnsix, btnwide, btnreset, btnone,btntwo,btnthree,btnfive,btnnoball,btnout;
     ToggleButton btnwhobats;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     int Bscore = 0;
     int balls = 0;
     int aouts = 0;
+    int truthval = 55;
     int bouts = 0;
     float newballs = 0;
 
@@ -61,7 +65,12 @@ public class MainActivity extends AppCompatActivity {
         blackballfour = findViewById(R.id.blackballfour);
         blackballfive = findViewById(R.id.blackballfive);
         blackballsix = findViewById(R.id.blackballsix);
-
+        nameayy = findViewById(R.id.teamAname);
+        nameayy.setText(getIntent().getExtras().getString("teamonename"));
+        namebay = findViewById(R.id.teamBname);
+        namebay.setText(getIntent().getExtras().getString("teamtwoname"));
+        Intent intent = getIntent();
+        truthval = intent.getIntExtra("isAfirst",1000);
 
         btnwhobats.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +87,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if(truthval == 1){
+            team_a_bat_image.setVisibility(View.VISIBLE);
+            team_b_bat_image.setVisibility(View.INVISIBLE);
+            isTeamABatting = true;
+        }
+        else if(truthval == 0){
+            team_b_bat_image.setVisibility(View.VISIBLE);
+            team_a_bat_image.setVisibility(View.INVISIBLE);
+            isTeamABatting = false;
+        }
+
 
         btnfour.setOnClickListener(new View.OnClickListener() {
             @Override
