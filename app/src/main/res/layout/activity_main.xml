@@ -71,8 +71,61 @@
                 android:textSize="20sp"
                 android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
-                android:text="Runs" />
+                android:text="Statistics" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Over: "
+                    android:textColor="#616161"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/over_numb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Outs: "
+                    android:textColor="#616161"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/outnumb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:text="0" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btnfour"
@@ -148,9 +201,57 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ballsimagedisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@id/runsdisplay"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/blackballone"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/bball" />
+
+        <ImageView
+            android:id="@+id/blackballtwo"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/bball" />
+
+        <ImageView
+            android:id="@+id/blackballthree"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/bball" />
+
+        <ImageView
+            android:id="@+id/blackballfour"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/bball" />
+
+        <ImageView
+            android:id="@+id/blackballfive"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/bball" />
+
+        <ImageView
+            android:id="@+id/blackballsix"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/bball" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/togglerdisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/ballsimagedisplay"
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
@@ -179,46 +280,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/over"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:paddingLeft="16dp"
-                android:text="Over: "
-                android:textColor="#616161"
-                android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/over_numb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:inputType="number"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/out"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:paddingLeft="20dp"
-                android:text="Outs: "
-                android:textColor="#616161"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/outnumb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-light"
-                android:inputType="number"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:text="0" />
 
         </LinearLayout>
 
@@ -241,51 +303,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ballsimagedisplay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="16dp"
-            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/blackballone"
-                android:layout_width="55dp"
-                android:layout_height="47dp"
-                app:srcCompat="@drawable/bball" />
-
-            <ImageView
-                android:id="@+id/blackballtwo"
-                android:layout_width="55dp"
-                android:layout_height="47dp"
-                app:srcCompat="@drawable/bball" />
-
-            <ImageView
-                android:id="@+id/blackballthree"
-                android:layout_width="55dp"
-                android:layout_height="47dp"
-                app:srcCompat="@drawable/bball" />
-
-            <ImageView
-                android:id="@+id/blackballfour"
-                android:layout_width="55dp"
-                android:layout_height="47dp"
-                app:srcCompat="@drawable/bball" />
-
-            <ImageView
-                android:id="@+id/blackballfive"
-                android:layout_width="55dp"
-                android:layout_height="47dp"
-                app:srcCompat="@drawable/bball" />
-
-            <ImageView
-                android:id="@+id/blackballsix"
-                android:layout_width="55dp"
-                android:layout_height="47dp"
-                app:srcCompat="@drawable/bball" />
-
-        </LinearLayout>
 
     </LinearLayout>
 
