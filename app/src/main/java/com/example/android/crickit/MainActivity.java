@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     int aouts = 0;
     int bouts = 0;
     float newballs = 0;
+
     int overs = 0;
     float newovers = 0;
     boolean isTeamABatting = true;
@@ -421,6 +422,44 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     bouts += 1;
                     outnumb.setText(bouts + "");
+                }
+
+                if(balls != 5){
+                    balls+=1;
+                    newballs +=0.1;
+                    newovers = overs + newballs;
+                    ball_numb.setText(balls+"");
+                    over_numb.setText(newovers+"");
+                    if(balls == 1){
+                        blackballone.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 2){
+                        blackballtwo.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 3){
+                        blackballthree.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 4){
+                        blackballfour.setImageResource(R.drawable.rball);
+                    }
+                    if(balls == 5){
+                        blackballfive.setImageResource(R.drawable.rball);
+                    }
+                }
+                else{
+                    balls = 0;
+                    newballs = 0;
+                    ball_numb.setText(balls+"");
+                    overs +=1;
+                    newovers = overs + newballs;
+                    over_numb.setText(newovers+"");
+                    blackballone.setImageResource(R.drawable.bball);
+                    blackballtwo.setImageResource(R.drawable.bball);
+                    blackballthree.setImageResource(R.drawable.bball);
+                    blackballfour.setImageResource(R.drawable.bball);
+                    blackballfive.setImageResource(R.drawable.bball);
+                    blackballsix.setImageResource(R.drawable.bball);
+                    //changes ball color
                 }
             }
         });
