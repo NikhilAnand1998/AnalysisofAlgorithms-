@@ -324,5 +324,13 @@
         android:textOff="Team A Bats"
         android:textOn="Team B Bats" />
 
+    <Button
+        android:id="@+id/btnend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="End" />
+
 </RelativeLayout>
 
