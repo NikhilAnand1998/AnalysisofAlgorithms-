@@ -27,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
     Stack<Integer> teamAstack = new Stack<>();
     Stack<Integer> teamBstack = new Stack<>();
     //EditText team_a_score;
-    Button   btnfour, btnsix, btnwide, btnreset, btnone,btntwo,btnthree,btnfive,btnnoball,btnout;
+    Button   btnfour, btnsix, btnwide, btnreset, btnone,btntwo,btnthree,btnfive,btnnoball,btnout,btnend;
     ToggleButton btnwhobats;
     ImageView team_a_bat_image, team_b_bat_image, blackballone,blackballtwo,blackballthree,blackballfour,blackballfive,blackballsix;
     int Ascore = 0;
     int Bscore = 0;
     int balls = 0;
+    int balls_int_a =0;
+    int balls_int_b =0;
     int aouts = 0;
     int lastballout = 99;
     int lastballwide = 39;
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         team_a_score =  findViewById(R.id.team_a_score);
         team_b_score =  findViewById(R.id.team_b_score);
+        btnend = findViewById(R.id.btnend);
         outnumb = findViewById(R.id.outnumb);
         over_numb = findViewById(R.id.over_numb);
         btnfour = findViewById(R.id.btnfour);
@@ -127,28 +130,30 @@ public class MainActivity extends AppCompatActivity {
                     teamAstack.push(4);
                     if (aballs != 0.5) {
                         balls += 1;
+                        balls_int_a +=1;
                         aballs += 0.1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
-                        if (aballs == 0.1) {
+                        if (balls_int_a == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.2) {
+                        if (balls_int_a == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.3) {
+                        if (balls_int_a == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.4) {
+                        if (balls_int_a == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.5) {
+                        if (balls_int_a == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
 
                     } else {
                         balls = 0;
+                        balls_int_a =0;
                         aballs = 0;
                         aovers += 1;
                         newovers = aovers + aballs;
@@ -167,22 +172,23 @@ public class MainActivity extends AppCompatActivity {
                     teamBstack.push(4);
                     if (bballs != 0.5) {
                         balls += 1;
+                        balls_int_b +=1;
                         bballs += 0.1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
-                        if (bballs == 0.1) {
+                        if (balls_int_b == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.2) {
+                        if (balls_int_b == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.3) {
+                        if (balls_int_b == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.4) {
+                        if (balls_int_b == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.5) {
+                        if (balls_int_b == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -190,8 +196,9 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         bballs = 0;
+                        balls_int_b =0;
                         bovers += 1;
-                        newovers = bovers + aballs;
+                        newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
                         blackballone.setImageResource(R.drawable.bball);
                         blackballtwo.setImageResource(R.drawable.bball);
@@ -213,22 +220,23 @@ public class MainActivity extends AppCompatActivity {
                     teamAstack.push(6);
                     if (aballs != 0.5) {
                         balls += 1;
+                        balls_int_a +=1;
                         aballs += 0.1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
-                        if (aballs == 0.1) {
+                        if (balls_int_a == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.2) {
+                        if (balls_int_a == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.3) {
+                        if (balls_int_a == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.4) {
+                        if (balls_int_a == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.5) {
+                        if (balls_int_a == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -236,6 +244,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         aballs = 0;
+                        balls_int_a = 0;
                         aovers += 1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
@@ -254,22 +263,23 @@ public class MainActivity extends AppCompatActivity {
                     teamBstack.push(6);
                     if (bballs != 0.5) {
                         balls += 1;
+                        balls_int_b +=1;
                         bballs += 0.1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
-                        if (bballs == 0.1) {
+                        if (balls_int_b == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.2) {
+                        if (balls_int_b == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.3) {
+                        if (balls_int_b == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.4) {
+                        if (balls_int_b == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.5) {
+                        if (balls_int_b == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -277,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         bballs = 0;
+                        balls_int_b = 0;
                         bovers += 1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
@@ -319,22 +330,23 @@ public class MainActivity extends AppCompatActivity {
                     teamAstack.push(1);
                     if (aballs != 0.5) {
                         balls += 1;
+                        balls_int_a +=1;
                         aballs += 0.1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
-                        if (aballs == 0.1) {
+                        if (balls_int_a == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.2) {
+                        if (balls_int_a == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.3) {
+                        if (balls_int_a == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.4) {
+                        if (balls_int_a == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.5) {
+                        if (balls_int_a == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -342,6 +354,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         aballs = 0;
+                        balls_int_a =0;
                         aovers += 1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
@@ -361,21 +374,22 @@ public class MainActivity extends AppCompatActivity {
                     if (bballs != 0.5) {
                         balls += 1;
                         bballs += 0.1;
+                        balls_int_b +=1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
-                        if (bballs == 0.1) {
+                        if (balls_int_b == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.2) {
+                        if (balls_int_b == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.3) {
+                        if (balls_int_b == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.4) {
+                        if (balls_int_b == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.5) {
+                        if (balls_int_b == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -383,6 +397,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         bballs = 0;
+                        balls_int_b = 0;
                         bovers += 1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
@@ -407,21 +422,22 @@ public class MainActivity extends AppCompatActivity {
                     if (aballs != 0.5) {
                         balls += 1;
                         aballs += 0.1;
+                        balls_int_a +=1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
-                        if (aballs == 0.1) {
+                        if (balls_int_a == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.2) {
+                        if (balls_int_a == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.3) {
+                        if (balls_int_a == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.4) {
+                        if (balls_int_a == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.5) {
+                        if (balls_int_a == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -429,6 +445,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         aballs = 0;
+                        balls_int_a = 0;
                         aovers += 1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
@@ -448,28 +465,29 @@ public class MainActivity extends AppCompatActivity {
                     if (bballs != 0.5) {
                         balls += 1;
                         bballs += 0.1;
+                        balls_int_b +=1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
-                        if (bballs == 0.1) {
+                        if (balls_int_b == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.2) {
+                        if (balls_int_b == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.3) {
+                        if (balls_int_b == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.4) {
+                        if (balls_int_b == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.5) {
+                        if (balls_int_b == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
-
 
                     } else {
                         balls = 0;
                         bballs = 0;
+                        balls_int_b = 0;
                         bovers += 1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
@@ -494,22 +512,23 @@ public class MainActivity extends AppCompatActivity {
                     teamAstack.push(3);
                     if (aballs != 0.5) {
                         balls += 1;
+                        balls_int_a +=1;
                         aballs += 0.1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
-                        if (aballs == 0.1) {
+                        if (balls_int_a == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.2) {
+                        if (balls_int_a == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.3) {
+                        if (balls_int_a == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.4) {
+                        if (balls_int_a == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.5) {
+                        if (balls_int_a == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -517,6 +536,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         aballs = 0;
+                        balls_int_a = 0;
                         aovers += 1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
@@ -535,22 +555,23 @@ public class MainActivity extends AppCompatActivity {
                     teamBstack.push(3);
                     if (bballs != 0.5) {
                         balls += 1;
+                        balls_int_b +=1;
                         bballs += 0.1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
-                        if (bballs == 0.1) {
+                        if (balls_int_b == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.2) {
+                        if (balls_int_b == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.3) {
+                        if (balls_int_b == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.4) {
+                        if (balls_int_b == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.5) {
+                        if (balls_int_b == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -558,6 +579,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         bballs = 0;
+                        balls_int_b = 0;
                         bovers += 1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
@@ -582,21 +604,22 @@ public class MainActivity extends AppCompatActivity {
                     if (aballs != 0.5) {
                         balls += 1;
                         aballs += 0.1;
+                        balls_int_a +=1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
-                        if (aballs == 0.1) {
+                        if (balls_int_a == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.2) {
+                        if (balls_int_a == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.3) {
+                        if (balls_int_a == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.4) {
+                        if (balls_int_a == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.5) {
+                        if (balls_int_a == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -604,6 +627,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         aballs = 0;
+                        balls_int_a =0;
                         aovers += 1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
@@ -623,21 +647,22 @@ public class MainActivity extends AppCompatActivity {
                     if (bballs != 0.5) {
                         balls += 1;
                         bballs += 0.1;
+                        balls_int_b +=1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
-                        if (bballs == 0.1) {
+                        if (balls_int_b == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.2) {
+                        if (balls_int_b == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.3) {
+                        if (balls_int_b == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.4) {
+                        if (balls_int_b == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.5) {
+                        if (balls_int_b == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -646,6 +671,7 @@ public class MainActivity extends AppCompatActivity {
                         balls = 0;
                         bballs = 0;
                         bovers += 1;
+                        balls_int_b =0;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
                         blackballone.setImageResource(R.drawable.bball);
@@ -669,21 +695,22 @@ public class MainActivity extends AppCompatActivity {
                     if (aballs != 0.5) {
                         balls += 1;
                         aballs += 0.1;
+                        balls_int_a +=1;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
-                        if (aballs == 0.1) {
+                        if (balls_int_a == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.2) {
+                        if (balls_int_a == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.3) {
+                        if (balls_int_a == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.4) {
+                        if (balls_int_a == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (aballs == 0.5) {
+                        if (balls_int_a == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -692,6 +719,7 @@ public class MainActivity extends AppCompatActivity {
                         balls = 0;
                         aballs = 0;
                         aovers += 1;
+                        balls_int_a =0;
                         newovers = aovers + aballs;
                         over_numb.setText(newovers + "");
                         blackballone.setImageResource(R.drawable.bball);
@@ -710,22 +738,23 @@ public class MainActivity extends AppCompatActivity {
                     teamBstack.push(lastballout);
                     if (bballs != 0.5) {
                         balls += 1;
+                        balls_int_b +=1;
                         bballs += 0.1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
-                        if (bballs == 0.1) {
+                        if (balls_int_b == 1) {
                             blackballone.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.2) {
+                        if (balls_int_b == 2) {
                             blackballtwo.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.3) {
+                        if (balls_int_b == 3) {
                             blackballthree.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.4) {
+                        if (balls_int_b == 4) {
                             blackballfour.setImageResource(R.drawable.rball);
                         }
-                        if (bballs == 0.5) {
+                        if (balls_int_b == 5) {
                             blackballfive.setImageResource(R.drawable.rball);
                         }
 
@@ -733,6 +762,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         balls = 0;
                         bballs = 0;
+                        balls_int_b =0;
                         bovers += 1;
                         newovers = bovers + bballs;
                         over_numb.setText(newovers + "");
@@ -760,10 +790,12 @@ public class MainActivity extends AppCompatActivity {
                             lastval = teamAstack.pop();
                             Ascore = Ascore - lastval;
                             team_a_score.setText(Ascore + "");
+                            teamAstack.push(39);
                             return;
                         } else {
                             aouts -= 1;
                             outnumb.setText(aouts + "");
+                            teamAstack.push(99);
                             if (aballs == 0) {
                                 blackballone.setImageResource(R.drawable.rball);
                                 blackballtwo.setImageResource(R.drawable.rball);
@@ -867,10 +899,12 @@ public class MainActivity extends AppCompatActivity {
                                 lastval = teamBstack.pop();
                                 Bscore = Bscore - lastval;
                                 team_b_score.setText(Bscore + "");
+                                teamBstack.push(39);
                                 return;
                             } else {
                                 bouts -= 1;
                                 outnumb.setText(bouts + "");
+                                teamBstack.push(99);
                                 if (bballs == 0) {
                                     blackballone.setImageResource(R.drawable.rball);
                                     blackballtwo.setImageResource(R.drawable.rball);
@@ -969,5 +1003,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+            btnend.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this,GameReview.class);
+                    intent.putExtra("stack1",teamAstack);
+                    intent.putExtra("stack2",teamBstack);
+                    startActivity(intent);
+                }
+            });
     }
 }
