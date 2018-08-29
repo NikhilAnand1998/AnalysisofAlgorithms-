@@ -5,16 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".InitiateLogin">
 
     <EditText
         android:id="@+id/teamone"
         android:layout_width="wrap_content"
         android:layout_height="57dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Team 1 Name"
         android:inputType="textPersonName" />
@@ -22,8 +21,9 @@
     <EditText
         android:id="@+id/teamtwo"
         android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="57dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_below="@+id/teamone"
         android:ems="10"
         android:hint="Team 2 Name"
@@ -32,21 +32,32 @@
     <EditText
         android:id="@+id/maxovers"
         android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="179dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/teamtwo"
         android:ems="10"
         android:hint="Number of Overs"
         android:inputType="number" />
 
     <Button
+        android:id="@+id/btntoss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/maxovers"
+        android:layout_toEndOf="@+id/maxovers"
+        android:layout_below="@+id/rggroup"
+        android:layout_marginBottom="16dp"
+        android:text="Simulate Toss" />
+
+    <Button
         android:id="@+id/btnsubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/teamone"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="122dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
         android:text="Submit" />
 
     <RadioGroup
@@ -54,34 +65,34 @@
         android:layout_width="151dp"
         android:layout_height="113dp"
         android:layout_alignTop="@+id/teamone"
-        android:layout_toEndOf="@+id/teamone">
+        android:layout_toEndOf="@+id/teamone"
+        android:layout_toRightOf="@+id/teamone">
 
         <RadioButton
             android:id="@+id/teamonebat"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="57dp"
             android:layout_weight="1" />
 
         <RadioButton
             android:id="@+id/teamtwobat"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-             />
+            android:layout_height="57dp"
+            android:layout_weight="1" />
 
     </RadioGroup>
 
     <TextView
         android:id="@+id/batsfirst"
-        android:layout_width="151dp"
-        android:layout_height="71dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/teamone"
         android:layout_marginBottom="-80dp"
         android:layout_toEndOf="@+id/teamone"
+        android:layout_toRightOf="@+id/teamone"
         android:fontFamily="sans-serif-medium"
-        android:padding="16dp"
         android:text="Bats First"
         android:textColor="#616161"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
 </RelativeLayout>

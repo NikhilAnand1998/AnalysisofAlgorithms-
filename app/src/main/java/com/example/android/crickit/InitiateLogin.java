@@ -11,12 +11,14 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class InitiateLogin extends AppCompatActivity {
     TextView batsfirsttest;
     String nameone, nametwo;
     int     numbovers;
     int     afirst;
-    Button  btnsubmit;
+    Button  btnsubmit, btntoss;
     EditText teamone, teamtwo, maxovers;
     RadioButton radioButton, radioButtonB;
 
@@ -29,9 +31,28 @@ public class InitiateLogin extends AppCompatActivity {
         teamtwo = findViewById(R.id.teamtwo);
         maxovers = findViewById(R.id.maxovers);
         btnsubmit = findViewById(R.id.btnsubmit);
+        btntoss = findViewById(R.id.btntoss);
         batsfirsttest = findViewById(R.id.batsfirst);
         radioButton = findViewById(R.id.teamonebat);
         radioButtonB = findViewById(R.id.teamtwobat);
+
+        btntoss.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           Random r = new Random();
+                                           int chance = r.nextInt(2);
+                                           if(chance == 1)
+                                           {
+                                               radioButton.setChecked(true);
+                                           }
+                                           else
+                                           {
+                                               radioButtonB.setChecked(true);
+                                           }
+
+                                       }
+                                   });
+
         btnsubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +74,7 @@ public class InitiateLogin extends AppCompatActivity {
                 }
                 else if(radioButtonB.isChecked())
                 {
-                    afirst =0;
+                    afirst = 0;
                     intent.putExtra("isAfirst",afirst);
                 }
                 ///
