@@ -1009,6 +1009,10 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this,GameReview.class);
                     intent.putExtra("stack1",teamAstack);
                     intent.putExtra("stack2",teamBstack);
+                    intent.putExtra("teamAScore", Ascore);
+                    intent.putExtra("teamBScore", Bscore);
+                    intent.putExtra("teamOneName", nameayy.getText());
+                    intent.putExtra("teamTwoName", namebay.getText());
                     startActivity(intent);
                 }
             });
